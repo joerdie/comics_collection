@@ -1,0 +1,35 @@
+{
+  "rules": {
+    ".read" : "root.child('/auth/' + auth.uid + '/admin').val() === true",
+    ".write" : "root.child('/auth/' + auth.uid + '/admin').val() === true",
+    "entitiesNode" : {
+      "entities" : {
+        ".indexOn" : ["type"],
+       	"$entity_id": {
+       	 ".read" : "root.child('/auth/' + auth.uid + '/locations').hasChild($entity_id) || root.child('/auth/' + auth.uid + '/locations').hasChild(data.child('canvasID').val())",
+         //We can write If it is in the canvas group that is in the allowed permisions for the user OR it is an allowed location OR it is a new record but we CANNOT delete records we dont have access too
+         ".write" : "auth != null && !data.exists() || root.child('/auth/' + auth.uid + '/locations').hasChild($entity_id) || root.child('/auth/' + auth.uid + '/locations').hasChild(data.child('canvasID').val())"
+      	}
+      },
+      "groups" : {
+        "$entity_id": {
+          ".read" :  "root.child('/auth/' + auth.uid + '/locations/' + $entity_id).val() === 0 || root.child('/auth/' + auth.uid + '/locations/' + $entity_id).val() === 1" ,
+          ".write" :  "auth != null && !data.exists() || root.child('/auth/' + auth.uid + '/locations/' + $entity_id).val() === 0 || root.child('/auth/' + auth.uid + '/locations/' + $entity_id).val() === 1"
+        }
+      },
+			"$other" : {
+        ".read": "auth != null"
+      }
+    },
+  	"auth" : {
+      ".read": "auth != null"
+    },
+    "users" : {
+      ".indexOn" : ["active"],
+      "$user_id": {
+        ".read": "auth != null && $user_id == auth.uid",
+        ".write" : "auth != null && $user_id == auth.uid"
+      }
+    }
+  }
+}

@@ -1,0 +1,134 @@
+.btn {
+  // display: table; This messes up the btn transition in Safari
+  display:block;
+  background-color: $colorSkyBlue;
+  padding: 15px 20px;
+  color: $colorWhite;
+  width: auto;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+  border-radius: 3px;
+  border: 0;
+  outline: 0;
+  cursor:pointer;
+  border:1px solid transparent;
+  transition: all 0.3s;
+
+  &:hover, &:active, &:focus {
+    background-color: $colorLightSkyBlue;
+    color: $colorWhite;
+  }
+
+  &[disabled] {
+    opacity: .5;
+  }
+
+  // .no-touch & {
+  //   &:visited, &:focus, &:active, &:hover {
+  //     background-color: $colorLightSkyBlue;
+  //     color: $colorWhite;
+  //   }
+  // }
+}
+
+.btn-alert {
+  @extend .btn;
+}
+
+.btn-red {
+  @extend .btn;
+  background-color: $colorRed;
+  &:hover, &:active, &:focus {
+    background-color: $colorRedHover;
+  }
+}
+
+.btn-white {
+  @extend .btn;
+  background-color: $colorWhite;
+  border: $lightGray2Border;
+  color: $colorBlack;
+
+  &:hover, &:active, &:focus {
+    background-color: $colorLightGray;
+    color: $colorBlack;
+  }
+
+  &[disabled] {
+    opacity: .5;
+
+    &:hover, &:active, &:focus {
+      background-color: $colorWhite;
+      color: $colorBlack;
+      border: 1px solid $colorLightGray2;
+    }
+  }
+}
+
+.btn-gray {
+  @extend .btn;
+  background-color: $colorLightGray;
+  border: $lightGray2Border;
+  color: $colorBlack;
+
+  &:hover, &:active, &:focus {
+    background-color: white;
+    color: $colorBlack;
+  }
+}
+
+.btn-transparent {
+  @extend .btn;
+  background-color: transparent;
+  border: 1px solid $colorWhite;
+  color: $colorWhite;
+
+  &:hover, &:active, &:focus {
+    border: 1px solid $colorLightSkyBlue;
+  }
+}
+
+.btn-addNewItem {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 0;
+  outline: 0;
+  background-color: red;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  line-height: 50px;
+  box-shadow: 1px 1px 6px 0 rgba(0,0,0,.5);
+  transition: background-color .3s;
+
+  &:hover {
+    background-color: darken(red, 10%);
+    color: white;
+  }
+}
+
+.btn-addNewItem_posBottom {
+  @extend .btn-addNewItem;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.btn-createIdeaStackButton {
+  background-color: red;
+  border: 0;
+  outline: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,.5);
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  z-index: 1;
+}

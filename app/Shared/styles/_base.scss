@@ -1,0 +1,175 @@
+@import 'variables';
+@import 'mixins';
+
+// Import Google Fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,300);
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: $colorBlack;
+  font-family: $fontBody;
+  font-size: 16px;
+  line-height: 21px;
+  text-rendering: optimizelegibility;
+  background-color:$colorLightGray;
+}
+
+img {
+  width: 100%;
+  vertical-align: middle;
+  display: block;
+  height: auto;
+  interpolation-mode: bicubic;
+  margin-bottom: 0;
+  //fix for flexbox
+  min-height: 1px;
+}
+
+iframe {
+  width: 100%;
+  vertical-align: middle;
+}
+
+a {
+  text-decoration: none;
+  cursor:pointer;
+}
+
+p {
+  a {
+    color: $colorLink;
+    text-decoration: none;
+    transition: color, .3s;
+    box-shadow: inset 0 -1px 0 0 $colorLightSkyBlue;
+
+    &:hover, &:focus, &:active {
+      color: $colorLightSkyBlue;
+      outline: 0;
+    }
+  }
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 300;
+  color: $colorBlack;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 300;
+  color: $colorBlack;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+h3, h4 {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 400;
+  color: $colorBlack;
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight:300;
+}
+
+p, ul, ol, dl, dd, table {
+  margin: 0 0 $hspace;
+}
+
+ul, ol {
+  padding: 0 0 0 ($vspace * 2);
+}
+
+// ol {
+//   counter-reset: li; /* Initiate a counter */
+//   margin-left: 0; /* Remove the default left margin */
+//   padding-left: 0; /* Remove the default left padding */
+// }
+
+// ol > li {
+//   position: relative; /* Create a positioning context */
+//   margin: 0 0 6px 1.5em; /* Give each list item a left margin to make room for the numbers */
+//   list-style: none; /* Disable the normal item numbering */
+// }
+
+// ol > li:before {
+//   content: counter(li); Use the counter as content
+//   counter-increment: li; /* Increment the counter by 1 */
+//   /* Position and style the number */
+//   position: absolute;
+//   top: 0;
+//   left: -1.5em;
+//   width: 1.5em;
+//   height: 1.5em;
+//   /* Some space between the number and the content in browsers that support
+//        generated content but not positioning it (Camino 2 is one example) */
+//   margin-right: 8px;
+//   color: $red;
+//   text-align: center;
+//   font-family: $lobsterFont;
+// }
+
+li ol,
+li ul {
+  margin-top: 6px;
+}
+
+ol ol li:last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-left: 14px;
+  text-indent: -14px;
+  padding-left: 14px;
+  //uncomment for custom bullet colors
+  // li {
+  //   &:before {
+  //     content: "• ";
+  //     color: $blue;
+  //     font-size: 1.2em;
+  //     vertical-align: bottom;
+  //   }
+  // }
+}
+
+
+// hr {
+//   clear: both;
+//   height: 1px;
+//   width: 50%;
+//   margin: 30px auto;
+//   border: none;
+//   background-color: $black;
+// }
+
+
+// .b-siteContainer {
+//   margin: 0 auto;
+//   position: relative;
+//   width: 100%;
+//   max-width: 1320px;
+//   margin-left: 60px;
+//   margin-right: 60px;
+// }
+//
+// .b-container {
+//   padding-left: $vspace;
+//   padding-right: $vspace;
+// }
+//
+// .b-column {
+//   padding-left: $vspace;
+//   padding-right: $vspace;
+// }

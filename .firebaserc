@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "storysimple-stage",
+    "dev": "storysimple-dev",
+    "testing": "storysimple-testingenv",
+    "localDev": "storysimple-codydevstagemirror",
+    "prod": "storysimple-production"
+  }
+}

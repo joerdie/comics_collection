@@ -1,0 +1,49 @@
+@import 'variables';
+@import 'helpers';
+
+.siteHeader {
+  height: 60px;
+  background-color: $colorDarkBlue;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  @extend .siteContainer;
+}
+
+.logoLinkWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  height: 38px;
+  fill: #fff;
+  margin-top:6px;
+}
+
+
+.linksMenusWrapper {
+  display: flex;
+  align-items: center;
+
+
+  >a {
+    color: white;
+    font-size: 16px;
+    opacity: .75;
+    transition: opacity .3s;
+
+    &:hover {
+      color: white;
+      opacity: 1;
+    }
+  }
+}

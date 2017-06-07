@@ -1,0 +1,25 @@
+.m-headerSendFeedback {
+  margin-left: 40px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.m-headerSendFeedback-text {
+  margin-right: 10px;
+  color: white;
+  opacity: .75;
+  transition: opacity .3s;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.m-headerSendFeedback-emailIconWrapper {
+  >.email {
+    fill: white;
+    cursor: pointer;
+  }
+}

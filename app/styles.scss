@@ -1,0 +1,32 @@
+@import 'normalize';
+
+//base styles
+@import 'base';
+
+//elements
+@import 'buttons';
+@import 'pageLayout';
+@import 'formElements';
+
+//import variables
+@import 'variables';
+
+.siteMain {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: $colorLightGray;
+
+  //this is the bogus div that react requires
+  >div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.siteWrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}

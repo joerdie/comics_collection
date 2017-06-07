@@ -1,0 +1,16 @@
+@mixin listPlain {
+  list-style: none;
+  padding-left: 0;
+  text-indent: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+
+  li {
+    &:before {
+      content: "";
+      font-size: 1.4em;
+      vertical-align: middle;
+      display: none;
+    }
+  }
+}

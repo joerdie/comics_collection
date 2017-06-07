@@ -1,0 +1,20 @@
+@import 'variables';
+
+.siteContainer {
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  max-width: 1320px;
+  margin-left: 60px;
+  margin-right: 60px;
+}
+
+.container {
+  padding-left: $vspace;
+  padding-right: $vspace;
+}
+
+.column {
+  padding-left: $vspace;
+  padding-right: $vspace;
+}
