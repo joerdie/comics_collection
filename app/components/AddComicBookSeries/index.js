@@ -18,7 +18,7 @@ class AddComicBookSeries extends React.Component {
   handleFormSubmission(e){
     e.preventDefault();
     const formData = {
-      name: this.refs.name.value,
+      name: this.refs.seriesName.value,
       publisher: this.refs.publisher.value,
       startYear: this.refs.startYear.value
     };
