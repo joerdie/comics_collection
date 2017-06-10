@@ -1,5 +1,5 @@
 {
-  "name": "StorySimple",
+  "name": "Comic Book App",
   "version": "0.2.0",
   "description": ":) ",
   "scripts": {
@@ -17,7 +17,7 @@
     "type": "git",
     "url": "https://github.com/thriveplan/storysimple.git"
   },
-  "author": "Thriveplan",
+  "author": "Joerdie Driscoll",
   "license": "MIT",
   "homepage": "https://github.com/thriveplan/storysimple.git",
   "dependencies": {
