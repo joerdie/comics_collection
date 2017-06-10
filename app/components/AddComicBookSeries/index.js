@@ -19,6 +19,7 @@ class AddComicBookSeries extends React.Component {
     e.preventDefault();
     const formData = {
       name: this.refs.name.value,
+      publisher: this.refs.publisher.value,
       startYear: this.refs.startYear.value
     };
 
@@ -31,7 +32,8 @@ class AddComicBookSeries extends React.Component {
         <div className={styles.container}>
           <h1>Add A Series</h1>
           <form ref="addComicSeries" onSubmit={this.handleFormSubmission.bind(this)}>
-            <input type="text" ref="name" placeholder="Series Name"/>
+            <input type="text" ref="seriesName" placeholder="Series Name"/>
+            <input type="text" ref="publisher" placeholder="Publisher"/>
             <input type="text" ref="startYear" placeholder="Start Year"/>
             <button className={styles.button} type="submit">Add Series</button>
           </form>
