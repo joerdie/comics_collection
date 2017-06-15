@@ -7,7 +7,8 @@ import styles from './styles.scss';
 //import actions
 import {
   createNewSeries,
-  retrieveSeries
+  retrieveSeries,
+  getSeriesFromComicVine
 } from './actions';
 
 class AddComicBookSeries extends React.Component {
@@ -26,6 +27,10 @@ class AddComicBookSeries extends React.Component {
     createNewSeries(formData);
   }
 
+  handleAPIClick(){
+    getSeriesFromComicVine();
+  }
+
   render() {
     return (
       <div>
@@ -37,6 +42,7 @@ class AddComicBookSeries extends React.Component {
             <input type="text" ref="startYear" placeholder="Start Year"/>
             <button className={styles.button} type="submit">Add Series</button>
           </form>
+          <button className={styles.button} onClick={this.handleAPIClick.bind(this)}>Test API</button>
         </div>
       </div>
     )
@@ -44,7 +50,6 @@ class AddComicBookSeries extends React.Component {
 }
 
 const mapStateToProps = (state, props) => {
-  console.log(state);
   return {
     series: state.seriesDashboard
   }
