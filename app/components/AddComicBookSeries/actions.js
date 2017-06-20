@@ -30,10 +30,12 @@ export function retrieveSeries() {
 
 
     export function getSeriesFromComicVine() {
-      const url = "http://comicvine.gamespot.com/api/characters/?api_key=f18c6362ec6d4c0d7b6d550f36478c1cd6c04a49&filter=gender:male,name:hawkeye&format=jsonp";
+      //const url = "http://comicvine.gamespot.com/api/characters/?api_key=f18c6362ec6d4c0d7b6d550f36478c1cd6c04a49&filter=gender:male,name:hawkeye&format=jsonp";
+      //const url = "http://comicvine.gamespot.com/api/volumes/?api_key=f18c6362ec6d4c0d7b6d550f36478c1cd6c04a49&field_list=name,start_year&sort=start_year:asc&filter=name:x-men&format=jsonp";
+      //const url = "http://comicvine.gamespot.com/api/volumes/?api_key=f18c6362ec6d4c0d7b6d550f36478c1cd6c04a49&filter=name:the x-men&format=jsonp";
+      const url = "http://comicvine.gamespot.com/api/volume/?api_key=f18c6362ec6d4c0d7b6d550f36478c1cd6c04a49&filter=id:4050-2133&format=jsonp";
       $.ajax({
         url: url,
-        // data: {test: "test"},
         type: 'GET',
         crossDomain: true,
         jsonp: 'json_callback',
@@ -42,12 +44,4 @@ export function retrieveSeries() {
           console.log(data);
         }
       });
-  // $.getJSON(url, function(jsonp){
-  //   // $("#jsonp-response").html(JSON.stringify(jsonp, null, 2));
-  //   console.log(jsonp);
-  // });
-
-  // $.post(" http://comicvine.gamespot.com/api/volume/?api_key=f18c6362ec6d4c0d7b6d550f36478c1cd6c04a49&filter=name:batman", function(data) {
-  //   console.log(data);
-  // });
 }
