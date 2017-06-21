@@ -30,10 +30,18 @@ export function retrieveSeries() {
 
 
     export function getSeriesFromComicVine() {
+      //Cody initial api solve.
       //const url = "http://comicvine.gamespot.com/api/characters/?api_key=f18c6362ec6d4c0d7b6d550f36478c1cd6c04a49&filter=gender:male,name:hawkeye&format=jsonp";
+      //Failed Volume search with Sort by year. 
       //const url = "http://comicvine.gamespot.com/api/volumes/?api_key=f18c6362ec6d4c0d7b6d550f36478c1cd6c04a49&field_list=name,start_year&sort=start_year:asc&filter=name:x-men&format=jsonp";
+      //Volume Search
       //const url = "http://comicvine.gamespot.com/api/volumes/?api_key=f18c6362ec6d4c0d7b6d550f36478c1cd6c04a49&filter=name:the x-men&format=jsonp";
-      const url = "http://comicvine.gamespot.com/api/volume/?api_key=f18c6362ec6d4c0d7b6d550f36478c1cd6c04a49&filter=id:4050-2133&format=jsonp";
+      //get issues with volume id
+      //const url = "http://comicvine.gamespot.com/api/issues/?api_key=f18c6362ec6d4c0d7b6d550f36478c1cd6c04a49&filter=volume:2133&format=jsonp";
+      //Example for getting single issue.
+      //const url = "http://comicvine.gamespot.com/api/issue/4000-6694/?api_key=f18c6362ec6d4c0d7b6d550f36478c1cd6c04a49&format=jsonp";
+      //Example for getting issue with volume and issue number known. 
+      //http://www.comicvine.com/api/issues/?api_key=[API KEY]&filter=volume:3976,issue_number:3
       $.ajax({
         url: url,
         type: 'GET',
