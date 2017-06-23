@@ -6,7 +6,10 @@ import App from 'index';
 // import NotFound from 'components/NotFoundPage';
 import AddComicBookPage from 'components/AddComicBookPage';
 import AddComicBookSeries from 'components/AddComicBookSeries';
+import SignupPage from 'components/SignupPage';
 import HomePage from 'components/HomePage';
+import MyAccountPage from 'components/MyAccountPage';
+import SearchPage from 'components/SearchPage';
 import {Router, Route, IndexRoute} from 'react-router';
 import { Provider } from 'react-redux';
 import store, { history } from 'store';
@@ -17,16 +20,28 @@ const router = (
       <Route path="/" component={App}>
         <IndexRoute
           component={HomePage}
-        ></IndexRoute>
+        />
         <Route
           path="/addseries"
           component={AddComicBookSeries}
           testing="yep"
-        ></Route>
+        />
         <Route
           path="/addissue"
           component={AddComicBookPage}
-        ></Route>
+        />
+        <Route
+          path="/signup"
+          component={SignupPage}
+        />
+        <Route
+          path="/myaccount"
+          component={MyAccountPage}
+        />
+        <Route
+          path="/search"
+          component={SearchPage}
+        />
       </Route>
     </Router>
   </Provider>

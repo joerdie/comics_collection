@@ -65,9 +65,7 @@ export class App extends React.Component {
 
 const mapStateToProps = (state) => {
   return {
-    // auth: state.auth,
-    // users: state.users,
-    // authenticated: state.authenticated
+    userInfo: state.userInfo
   }
 }
 

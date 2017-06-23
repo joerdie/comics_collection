@@ -1,0 +1,9 @@
+@import 'buttons';
+
+.button {
+  @extend .btn;
+}
+
+.container {
+  padding-top: 20px;
+}
