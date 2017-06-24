@@ -12,13 +12,19 @@ import {
 import styles from './styles.scss';
 
 class HomePage extends React.Component {
-  componentDidMount(){
-    // fetchVolumes(this.props.userInfo.uid);
-    fetchVolumes('9ZmX6t1iW9UNjTNjoR6tMgWc4m82');
-  }
+  // componentDidMount(){
+  //   fetchVolumes(this.props.userInfo.uid);
+  //   // fetchVolumes('9ZmX6t1iW9UNjTNjoR6tMgWc4m82');
+  // }
 
   componentWillUnmount(){
     unFetchVolumes(this.props.userInfo.uid);
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (this.props.userInfo.uid == undefined && nextProps.userInfo.uid != undefined) {
+      fetchVolumes(nextProps.userInfo.uid);
+    }
   }
 
   render() {
@@ -26,7 +32,7 @@ class HomePage extends React.Component {
     let volumesArray = [];
     for (let volume in volumes) {
       let volumeObj = volumes[volume];
-      volumesArray.push(<div>{volumeObj}</div>)
+      volumesArray.push(<div key={volume}>{volumeObj}</div>)
     }
 
     return (
