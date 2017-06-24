@@ -1,5 +1,6 @@
 @import 'variables';
 @import 'helpers';
+@import 'buttons';
 
 .siteHeader {
   height: 60px;
@@ -27,6 +28,10 @@
   height: 38px;
   fill: #fff;
   margin-top:6px;
+}
+
+.button {
+  @extend .btn
 }
 
 

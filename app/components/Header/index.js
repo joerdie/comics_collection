@@ -2,11 +2,14 @@ import React from 'react';
 import {Link} from 'react-router';
 
 //import styles
-// import styles from './styles.scss';
 import styles from './styles.scss';
 
 //import components
 export default class Header extends React.Component {
+  handleLogOutClick(){
+    this.props.logOut();
+  }
+
   render() {
     return (
       <header className={styles.siteHeader}>
@@ -16,6 +19,7 @@ export default class Header extends React.Component {
               name here
             </Link>
           </div>
+          <button onClick={this.handleLogOutClick.bind(this)} className={styles.button}>Log Out</button>
         </div>
       </header>
     )

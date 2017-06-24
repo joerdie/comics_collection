@@ -23,10 +23,11 @@ firebase.initializeApp(config);
 // }
 
 export function logOut() {
-  const userID = store.getState().userInfo.uid;
+  // const userID = store.getState().userInfo.uid;
 
   firebase.auth().signOut().then(function() {
     //run events after logout. The checkAuth function is handling this now
+    console.log('successful');
   }, function(error) {
     //untrack users
     // firebase.database().ref(`users/${user.uid}/loggedIn`).set(true);

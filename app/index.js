@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Header from 'components/Header';
-import {getTrackUserInfo, checkAuth} from './actions';
+import {getTrackUserInfo, checkAuth, logOut} from './actions';
 
 //import styles
 require('styles.scss');
@@ -51,7 +51,7 @@ export class App extends React.Component {
           {showHeader &&
           <Header
             isAuthenticated={this.props.authenticated}
-            logOut={this.props.logOut}
+            logOut={logOut}
           ></Header>
           }
           <div className={styles.siteMain}>
