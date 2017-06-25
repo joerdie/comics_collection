@@ -30,7 +30,9 @@ export function retrieveSeries() {
 
   export function getSeriesFromComicVine() {
       //const url = "http://joerdie.com/api/volumes/";
-      const url = "http://joerdie.com/api/products/";
+      //const url = "http://joerdie.com/api/products/";
+      const url = "http://joerdie.com/api/tblPublishers";
+      //const url = "http://joerdie.com/api/GET-api-tblPublishers";
       $.ajax({
         url: url,
         type: 'GET',
