@@ -28,8 +28,21 @@ export function retrieveSeries() {
   });
 }
 
+  export function getSeriesFromComicVine() {
+      //const url = "http://joerdie.com/api/volumes/";
+      const url = "http://joerdie.com/api/products/";
+      $.ajax({
+        url: url,
+        type: 'GET',
+        crossDomain: true,
+        jsonp: 'json_callback',
+        dataType: 'jsonp',
+        success: function (data) {
+          console.log(data);
+        }
+      });
 
-    export function getSeriesFromComicVine() {
+    //export function getSeriesFromComicVine() {
       //Cody initial api solve.
       //const url = "http://comicvine.gamespot.com/api/characters/?api_key=f18c6362ec6d4c0d7b6d550f36478c1cd6c04a49&filter=gender:male,name:hawkeye&format=jsonp";
       //Failed Volume search with Sort by year. 
@@ -41,7 +54,9 @@ export function retrieveSeries() {
       //Example for getting single issue.
       //const url = "http://comicvine.gamespot.com/api/issue/4000-6694/?api_key=f18c6362ec6d4c0d7b6d550f36478c1cd6c04a49&format=jsonp";
       //Example for getting issue with volume and issue number known. 
-      //http://www.comicvine.com/api/issues/?api_key=[API KEY]&filter=volume:3976,issue_number:3
+      //const url = "http://www.comicvine.com/api/issues/?api_key=[API KEY]&filter=volume:3976,issue_number:3"
+      //Example of Publisher information
+      //const url = "http://comicvine.gamespot.com/api/publishers/?api_key=f18c6362ec6d4c0d7b6d550f36478c1cd6c04a49&filter=name:Marvel&format=jsonp";
       $.ajax({
         url: url,
         type: 'GET',
