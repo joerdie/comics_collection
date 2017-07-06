@@ -5,8 +5,7 @@ import $ from 'jquery';
 export function search(apiKey, term) {
   //build url to send to comic vine for a volume
   const url = `http://comicvine.gamespot.com/api/volumes/?api_key=${apiKey}&filter=name:${term}&format=jsonp`;
-
-  console.log(url);
+  // const url = `http://comicvine.gamespot.com/api/issues/?api_key=${apiKey}&filter=volume:${term}&format=jsonp`;
 
   // api call
   $.ajax({

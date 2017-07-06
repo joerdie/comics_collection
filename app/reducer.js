@@ -5,6 +5,7 @@ import { routerReducer } from 'react-router-redux';
 
 import seriesDashBoard from 'components/AddComicBookSeries/reducers';
 import userInfo from 'reducers/userInfo';
+import singleVolumeResult from 'components/singleVolumeResult/reducers';
 import searchResultsReducers from 'components/SearchPage/reducers';
 import homePageReducers from 'components/HomePage/reducers';
 
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   searchResultsReducers,
   userInfo,
   homePageReducers,
+  singleVolumeResult,
   routing : routerReducer
 });
 

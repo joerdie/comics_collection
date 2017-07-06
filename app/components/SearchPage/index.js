@@ -6,6 +6,9 @@ import {
   search
 } from './actions';
 
+//import components
+import SearchDetail from './components/SearchDetail';
+
 //import styles
 import styles from './styles.scss';
 
@@ -22,7 +25,12 @@ class SearchPage extends React.Component {
     //loop through the results and format them
     for (let result in results) {
       let resultObj = results[result]
-      resultsArray.push(<div key={result}><div>{resultObj.name} {resultObj.start_year}</div><button>+ Wish List</button><button>+ Collection</button></div>);
+      resultsArray.push(
+        <SearchDetail
+          key={result}
+          comicObj={resultObj}
+        />
+      );
     }
 
     return (

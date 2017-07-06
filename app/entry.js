@@ -10,6 +10,7 @@ import SignupPage from 'components/SignupPage';
 import HomePage from 'components/HomePage';
 import MyAccountPage from 'components/MyAccountPage';
 import SearchPage from 'components/SearchPage';
+import SingleVolumeResult from 'components/SingleVolumeResult';
 import {Router, Route, IndexRoute} from 'react-router';
 import { Provider } from 'react-redux';
 import store, { history } from 'store';
@@ -41,6 +42,10 @@ const router = (
         <Route
           path="/search"
           component={SearchPage}
+        />
+        <Route
+          path="/singleVolumeResult/:cvID"
+          component={SingleVolumeResult}
         />
       </Route>
     </Router>
