@@ -40,7 +40,7 @@ const router = (
           component={MyAccountPage}
         />
         <Route
-          path="/search"
+          path="/searchresults/:searchstring"
           component={SearchPage}
         />
         <Route

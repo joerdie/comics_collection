@@ -7,12 +7,12 @@ export function search(uid, apiKey, comicVineID) {
   console.log(apiKey);
 
   //grab the users volume from firebase
-  firebase.database().ref(`volumes/${uid}`).on('value', snapshot => {
-    store.dispatch({
-      type: 'UPDATE_HOME_PAGE_VOLUMES',
-      payload: snapshot.val()
-    })
-  });
+  // firebase.database().ref(`volumes/${uid}`).on('value', snapshot => {
+  //   store.dispatch({
+  //     type: 'UPDATE_HOME_PAGE_VOLUMES',
+  //     payload: snapshot.val()
+  //   })
+  // });
 
   const url = `http://comicvine.gamespot.com/api/issues/?api_key=${apiKey}&filter=volume:${comicVineID}&format=jsonp`;
 

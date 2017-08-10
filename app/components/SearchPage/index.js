@@ -13,8 +13,8 @@ import SearchDetail from './components/SearchDetail';
 import styles from './styles.scss';
 
 class SearchPage extends React.Component {
-  handleSearchBlur(e){
-    search(this.props.userInfo.CV_API_KEY, e.target.value);
+  componentDidMount() {
+    search(this.props.userInfo.CV_API_KEY, this.props.params.searchstring);
   }
 
   render() {
@@ -37,7 +37,7 @@ class SearchPage extends React.Component {
       <div>
         <div className={styles.container}>
           <h1>Search</h1>
-          <input type="text" onBlur={this.handleSearchBlur.bind(this)} placeholder="Search"/>
+          {/* <input type="text" onBlur={this.handleSearchBlur.bind(this)} placeholder="Search"/> */}
           {resultsArray}
         </div>
       </div>

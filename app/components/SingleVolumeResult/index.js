@@ -18,9 +18,13 @@ class SingleVolumeResult extends React.Component {
   //   search(this.props.userInfo.CV_API_KEY, this.props.params.cvID);
   // }
 
+  componentDidMount() {
+    search(this.props.userInfo.uid, this.props.userInfo.CV_API_KEY, this.props.params.cvID);
+  }
+
   componentWillReceiveProps(nextProps) {
+
     if (this.props.userInfo.CV_API_KEY == undefined && nextProps.userInfo.CV_API_KEY != undefined) {
-      search(this.props.userInfo.uid, nextProps.userInfo.CV_API_KEY, this.props.params.cvID);
     }
   }
 
@@ -28,7 +32,14 @@ class SingleVolumeResult extends React.Component {
   render() {
     //display all the results
     let results = this.props.results;
-    let resultsArray = [];
+    let resultsArray = [],
+    volumeName = "";
+
+    if (results[0] != undefined) {
+      if (results[0].volume != undefined) {
+        volumeName = results[0].volume.name
+      }
+    }
 
     //loop through the results and format them
     for (let result in results) {
@@ -46,7 +57,7 @@ class SingleVolumeResult extends React.Component {
     return (
       <div>
         <div className={styles.container}>
-          <h1>{results[0].volume.name}</h1>
+          <h1>{volumeName}</h1>
           {resultsArray}
         </div>
       </div>

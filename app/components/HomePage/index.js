@@ -38,11 +38,11 @@ class HomePage extends React.Component {
     return (
       <div>
         <div className={styles.container}>
-          <h1>Home Page</h1>
-          <input placeholder="search"/>
+          <h1>Yom Page</h1>
+          {/* <input placeholder="search"/>
           <button className={styles.button}>Collection</button>
           <button className={styles.button}>Wisth list</button>
-          <button className={styles.button}>Pull list</button>
+          <button className={styles.button}>Pull list</button> */}
           {volumesArray}
           {/* <Link to="/addseries" className={styles.button}>Add/View Series</Link> */}
         </div>
